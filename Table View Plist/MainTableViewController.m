@@ -7,6 +7,7 @@
 //
 
 #import "MainTableViewController.h"
+#import "DetailViewController.h"
 
 @interface MainTableViewController ()
 
@@ -145,16 +146,27 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-}
-*/
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        // Pegar o index path da célula selecionada
+        NSIndexPath * indexPath = [self.tableView indexPathForSelectedRow];
+        
+        // Instanciar o DetailViewController (Import)
+        // DetailViewController * controller = [[DetailViewController alloc] init];
+        
+        DetailViewController * controller = (DetailViewController *) [segue destinationViewController];
+        
+        controller.titleText = [self.dataList objectAtIndex:indexPath.row];
+    }
+    
 
+}
 #pragma mark - Plist Manager
 
 //Carrega array de um Plist passado como parametro.

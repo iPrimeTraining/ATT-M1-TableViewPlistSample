@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="k1n-Y0-hvn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cC9-MC-Keo">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -18,6 +18,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NbQ-fb-xr5" id="CQz-SL-jds">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="IXe-XD-u0R" kind="show" identifier="showDetail" id="GVy-gm-sWv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -25,8 +28,61 @@
                             <outlet property="delegate" destination="k1n-Y0-hvn" id="jYs-mx-V4W"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Tabela de Itens" id="V6k-w7-OEk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybg-6Y-u1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1268" y="1082"/>
+        </scene>
+        <!--Detalhes-->
+        <scene sceneID="azi-um-RQt">
+            <objects>
+                <viewController title="Detalhes" id="IXe-XD-u0R" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Qo-uC-IAg"/>
+                        <viewControllerLayoutGuide type="bottom" id="XYk-qa-7We"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IgE-5Q-0Ii">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conteudo que vem da celula selecionada na Table View" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KED-XB-70A">
+                                <rect key="frame" x="87" y="85" width="427" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KED-XB-70A" firstAttribute="leading" secondItem="IgE-5Q-0Ii" secondAttribute="leading" constant="87" id="Irn-jy-nAz"/>
+                            <constraint firstItem="KED-XB-70A" firstAttribute="top" secondItem="IgE-5Q-0Ii" secondAttribute="top" constant="85" id="N7e-su-leW"/>
+                            <constraint firstAttribute="trailing" secondItem="KED-XB-70A" secondAttribute="trailing" constant="86" id="rc9-9Y-1IC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="KED-XB-70A" id="xjO-Kp-iJM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qf-Wi-xuq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1934" y="1080"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PzK-ys-EUc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cC9-MC-Keo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WXF-Ls-Gr0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="k1n-Y0-hvn" kind="relationship" relationship="rootViewController" id="eUe-Ux-0i4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQ0-YO-JkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="456" y="1082"/>
         </scene>

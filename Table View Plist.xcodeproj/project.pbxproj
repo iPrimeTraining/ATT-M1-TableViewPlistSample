@@ -16,6 +16,7 @@
 		4B59E8211B6124BC00EEEF4A /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B59E8201B6124BC00EEEF4A /* MainTableViewController.m */; };
 		4B59E8231B613B9F00EEEF4A /* Frutas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B59E8221B613B9F00EEEF4A /* Frutas.plist */; };
 		4B59E8251B6142EC00EEEF4A /* Legumes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B59E8241B6142EC00EEEF4A /* Legumes.plist */; };
+		4BDDD6DC1B819A6A007BF40F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDDD6DB1B819A6A007BF40F /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		4B59E8201B6124BC00EEEF4A /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		4B59E8221B613B9F00EEEF4A /* Frutas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Frutas.plist; sourceTree = "<group>"; };
 		4B59E8241B6142EC00EEEF4A /* Legumes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Legumes.plist; sourceTree = "<group>"; };
+		4BDDD6DA1B819A6A007BF40F /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		4BDDD6DB1B819A6A007BF40F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				4B59E8201B6124BC00EEEF4A /* MainTableViewController.m */,
 				4B59E8221B613B9F00EEEF4A /* Frutas.plist */,
 				4B59E8241B6142EC00EEEF4A /* Legumes.plist */,
+				4BDDD6DA1B819A6A007BF40F /* DetailViewController.h */,
+				4BDDD6DB1B819A6A007BF40F /* DetailViewController.m */,
 			);
 			path = "Table View Plist";
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				4B59E8211B6124BC00EEEF4A /* MainTableViewController.m in Sources */,
 				4B59E7FF1B611FF400EEEF4A /* AppDelegate.m in Sources */,
 				4B59E7FC1B611FF400EEEF4A /* main.m in Sources */,
+				4BDDD6DC1B819A6A007BF40F /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +432,7 @@
 				4B59E81B1B611FF500EEEF4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B59E81C1B611FF500EEEF4A /* Build configuration list for PBXNativeTarget "Table View PlistTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +441,7 @@
 				4B59E81E1B611FF500EEEF4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
